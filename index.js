@@ -2,6 +2,7 @@
 // 1  export DISPLAY=:0 # in WSL 1
 // 2  export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
 // 3  export LIBGL_ALWAYS_INDIRECT=1
+
 const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
 const mongoose = require("mongoose");
