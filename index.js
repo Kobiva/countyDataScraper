@@ -181,7 +181,7 @@ async function countyScraper(page, browser) {
 
 async function main() {
   await connectToMongoDb();
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox"] });
   const page = await browser.newPage();
   const leads = await countyScraper(page, browser);
 }
